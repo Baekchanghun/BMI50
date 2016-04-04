@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="2Wb-h9-vRp">
+                                <rect key="frame" x="0.0" y="-169" width="676" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Wb-h9-vRp" secondAttribute="height" multiplier="4:1" id="3er-ki-d6l"/>
+                                    <constraint firstAttribute="width" secondItem="2Wb-h9-vRp" secondAttribute="height" multiplier="200:49" id="E9U-Xj-dFn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3er-ki-d6l"/>
+                                        <exclude reference="E9U-Xj-dFn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3er-ki-d6l"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="196"/>
+                                    <mask key="constraints">
+                                        <include reference="E9U-Xj-dFn"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-En-1eI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.52721699561965196" green="0.99919780732440988" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cqd-En-1eI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Gcq-du-BZV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cqd-En-1eI" secondAttribute="bottom" id="KX0-gd-al8"/>
+                            <constraint firstItem="2Wb-h9-vRp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Le2-Hi-pEM"/>
+                            <constraint firstItem="2Wb-h9-vRp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="adG-c9-bxx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Wb-h9-vRp" secondAttribute="trailing" constant="-16" id="fgU-4Z-eiX"/>
+                            <constraint firstItem="Cqd-En-1eI" firstAttribute="top" secondItem="2Wb-h9-vRp" secondAttribute="bottom" id="q01-BO-HAk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cqd-En-1eI" secondAttribute="trailing" constant="-16" id="yow-9v-X6X"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2Wb-h9-vRp"/>
+                                <exclude reference="Cqd-En-1eI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Le2-Hi-pEM"/>
+                                <exclude reference="adG-c9-bxx"/>
+                                <exclude reference="fgU-4Z-eiX"/>
+                                <exclude reference="KX0-gd-al8"/>
+                                <exclude reference="Gcq-du-BZV"/>
+                                <exclude reference="q01-BO-HAk"/>
+                                <exclude reference="yow-9v-X6X"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2Wb-h9-vRp"/>
+                                <include reference="Cqd-En-1eI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Le2-Hi-pEM"/>
+                                <include reference="adG-c9-bxx"/>
+                                <include reference="fgU-4Z-eiX"/>
+                                <include reference="KX0-gd-al8"/>
+                                <include reference="Gcq-du-BZV"/>
+                                <include reference="q01-BO-HAk"/>
+                                <include reference="yow-9v-X6X"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="2Wb-h9-vRp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Le2-Hi-pEM"/>
+                                <include reference="adG-c9-bxx"/>
+                                <include reference="fgU-4Z-eiX"/>
+                                <include reference="KX0-gd-al8"/>
+                                <include reference="Gcq-du-BZV"/>
+                                <include reference="q01-BO-HAk"/>
+                                <include reference="yow-9v-X6X"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="432"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Banner" width="676" height="169"/>
+    </resources>
+</document>

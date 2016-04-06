@@ -63,11 +63,17 @@
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jGE-gr-mXV"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="weight in kg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPK-rk-N9o">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="HHX-J1-oit"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-gS-3f7">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -194,10 +200,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="XBe-gS-3f7" id="ZQv-YG-3ig"/>
+                        <outlet property="heightTextField" destination="bBT-id-V1h" id="OYY-y8-SF5"/>
+                        <outlet property="weightTextField" destination="tPK-rk-N9o" id="zlq-J6-hZx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="315" y="432"/>
+            <point key="canvasLocation" x="396" y="432.75"/>
         </scene>
     </scenes>
     <resources>

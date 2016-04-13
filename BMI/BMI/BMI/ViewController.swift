@@ -8,8 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    var weight : Double? = 0.0
+    var height : Double? = 0.0
+    
+    var bmi: Double?{
+        
+        get {
+            if (weight != nil) && (height != nil ){
+                return weight! / (height! * height!)
+            }else{
+                return nil
+            }
+        }
+    }
+
+    
     @IBOutlet weak var bmiLabel: UILabel!
     
     @IBOutlet weak var heightTextField: UITextField!
@@ -31,7 +46,39 @@ class ViewController: UIViewController {
         textField.resignFirstResponder()
         return true
         
-    } //keyboard 
+    } //keyboard
+    
+    // update UI
+    func updateUI(){
+        
+        if let b = self.bmi {
+            self.bmiLabel.text = String(format: "%4.1f",b)
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        guard let txt: String = textField.text else{ return }
+        
+        
+        func conv(numString: String) -> Double? {
+            let result : Double? = NSNumberFormatter().numberFromString(numString)?.doubleValue
+            return result
+        } //convert number -> string function
+        
+        switch( textField){
+                
+        case heightTextField:
+            self.height = conv(txt)
+        case weightTextField:
+            self.weight = conv(txt)
+        default:
+            print(" Something wrong")
+        }
+        
+        updateUI()
+        
+    }
 
 }
 
